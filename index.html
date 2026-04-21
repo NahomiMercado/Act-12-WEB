@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuck Jokes Vue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>Chuck Norris Jokes</h1>
+    <p class="subtitle">Nahomi Mercado Loaiza</p>
+
+    <div class="jokes-list">
+      <div class="joke-card" v-for="(joke, index) in chuck" :key="index">
+        <h2>Joke {{ index + 1 }}</h2>
+        <p>{{ joke.value }}</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
